@@ -8,7 +8,7 @@ package Model;
  *
  * @author G15br
  */
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private int edad;
     private String direccion;
