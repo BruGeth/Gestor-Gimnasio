@@ -4,17 +4,19 @@
  */
 package proyectogestiongimnasio;
 
-/**
- *
- * @author G15br
- */
+import Controller.GestionClientes;
+import Model.Cliente;
+import View.ClientMenu;
+
+
 public class ProyectoGestionGimnasio {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+       
     }
     
 }

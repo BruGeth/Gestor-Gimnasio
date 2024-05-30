@@ -45,7 +45,7 @@ public class ClientMenu extends javax.swing.JFrame {
         txtPeso = new javax.swing.JTextField();
         btnEliminarCliente = new javax.swing.JToggleButton();
         btnVolver = new javax.swing.JToggleButton();
-        btnRegistarCliente1 = new javax.swing.JToggleButton();
+        btnRegistarCliente = new javax.swing.JToggleButton();
         btnActualizarCliente = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaClientes = new javax.swing.JTable();
@@ -123,13 +123,13 @@ public class ClientMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
 
-        btnRegistarCliente1.setText("Registrar Cliente");
-        btnRegistarCliente1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistarCliente.setText("Registrar Cliente");
+        btnRegistarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistarCliente1ActionPerformed(evt);
+                btnRegistarClienteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistarCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
+        jPanel1.add(btnRegistarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
 
         btnActualizarCliente.setText("Actualizar Cliente");
         btnActualizarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -192,9 +192,9 @@ public class ClientMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVolverActionPerformed
 
-    private void btnRegistarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarCliente1ActionPerformed
+    private void btnRegistarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistarCliente1ActionPerformed
+    }//GEN-LAST:event_btnRegistarClienteActionPerformed
 
     private void btnActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarClienteActionPerformed
         // TODO add your handling code here:
@@ -237,11 +237,11 @@ public class ClientMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Icono;
-    private javax.swing.JTable TablaClientes;
-    private javax.swing.JToggleButton btnActualizarCliente;
-    private javax.swing.JToggleButton btnEliminarCliente;
-    private javax.swing.JToggleButton btnRegistarCliente1;
-    private javax.swing.JToggleButton btnVolver;
+    public javax.swing.JTable TablaClientes;
+    public javax.swing.JToggleButton btnActualizarCliente;
+    public javax.swing.JToggleButton btnEliminarCliente;
+    public javax.swing.JToggleButton btnRegistarCliente;
+    public javax.swing.JToggleButton btnVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -250,15 +250,15 @@ public class ClientMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtEdad;
-    private javax.swing.JTextField txtGenero;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtPeso;
-    private javax.swing.JTextField txtTalla;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JTextField txtCodigo;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtEdad;
+    public javax.swing.JTextField txtGenero;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtPeso;
+    public javax.swing.JTextField txtTalla;
     // End of variables declaration//GEN-END:variables
 }

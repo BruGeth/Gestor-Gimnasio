@@ -12,10 +12,10 @@ public class Empleado extends Persona {
 
     private CuentaEmpleado cuentaEmpleado;
 
-    public Empleado(String nombre, int edad, String direccion, String genero, double talla, double peso,CuentaEmpleado cuentaEmpleado) {
-        super(nombre, edad, direccion, genero, talla, peso); // Llamada al constructor de la clase Persona
+    public Empleado(String nombre,String apellidos, CuentaEmpleado cuentaEmpleado) {
+        super(nombre,apellidos ,0, "", "", 0.0, 0.0); // Llamada al constructor de la clase Persona
         this.cuentaEmpleado = cuentaEmpleado;
-    }    
+    }
 
     public CuentaEmpleado getCuentaEmpleado() {
         return cuentaEmpleado;
@@ -24,7 +24,5 @@ public class Empleado extends Persona {
     public void setCuentaEmpleado(CuentaEmpleado cuentaEmpleado) {
         this.cuentaEmpleado = cuentaEmpleado;
     }
-       
-    
-   
+
 }
