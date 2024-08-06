@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package vista;
 
 /**
  *
@@ -28,11 +28,11 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnGestionarClientes = new javax.swing.JButton();
+        btnAsistencia = new javax.swing.JButton();
+        btnIngresarProducto = new javax.swing.JButton();
+        btnRegistrarVenta = new javax.swing.JButton();
+        btnMenuSalir = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -43,55 +43,56 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo_Golds_Gym.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 120));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 120));
 
-        jButton1.setText("Ingresar Cliente");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnGestionarClientes.setText("Gestion Clientes");
+        btnGestionarClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnGestionarClientesActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 139, 128, 32));
+        jPanel1.add(btnGestionarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 160, 32));
 
-        jButton2.setText("Asistencia");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 177, 128, 32));
+        btnAsistencia.setText("Registrar Asistencia");
+        jPanel1.add(btnAsistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 160, 32));
 
-        jButton3.setText("Ingresar Producto");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 215, -1, 32));
+        btnIngresarProducto.setText("Gestion Producto");
+        jPanel1.add(btnIngresarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 160, 32));
 
-        jButton4.setText("Mostrar Producto");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 253, 128, 32));
+        btnRegistrarVenta.setText("Registar Venta");
+        btnRegistrarVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarVentaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegistrarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 160, 32));
 
-        jButton5.setText("Salir");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 291, 128, 32));
+        btnMenuSalir.setText("Salir");
+        jPanel1.add(btnMenuSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 160, 32));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Codigo", "Nombre", "Ingreso", "Hora"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, -1, 341));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 440, 341));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +103,13 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnGestionarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarClientesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnGestionarClientesActionPerformed
+
+    private void btnRegistrarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarVentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,15 +147,15 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    public javax.swing.JButton btnAsistencia;
+    public javax.swing.JButton btnGestionarClientes;
+    public javax.swing.JButton btnIngresarProducto;
+    public javax.swing.JButton btnMenuSalir;
+    public javax.swing.JButton btnRegistrarVenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

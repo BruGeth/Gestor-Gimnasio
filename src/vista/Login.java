@@ -2,12 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package vista;
+import DAO.LoginDAO;
 
-/**
- *
- * @author G15br
- */
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -15,6 +12,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setTitle("LOGIN");
     }
 
     /**
@@ -27,48 +25,53 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         Matricula = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        btnEntrar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        lblUsuario = new javax.swing.JLabel();
+        lblContraseña = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Matricula.setBorder(javax.swing.BorderFactory.createTitledBorder("Inicie Sesion"));
         Matricula.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtUsuarioActionPerformed(evt);
             }
         });
-        Matricula.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 185, 37));
+        Matricula.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 185, 37));
 
-        jButton1.setText("Iniciar Sesión");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        btnEntrar.setText("Iniciar Sesión");
+        btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEntrarMouseClicked(evt);
             }
         });
-        Matricula.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 110, 35));
-        Matricula.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 185, 41));
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
+        Matricula.add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 110, 35));
 
-        jButton2.setText("Salir");
-        Matricula.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 87, 35));
+        btnSalir.setText("Salir");
+        Matricula.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 87, 35));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Usuario:");
-        Matricula.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+        lblUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblUsuario.setText("Usuario:");
+        Matricula.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Contraseña:");
-        Matricula.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, 41));
+        lblContraseña.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblContraseña.setText("Contraseña:");
+        Matricula.add(lblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, 41));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo_Golds_Gym.png"))); // NOI18N
         Matricula.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 40, -1, -1));
+        Matricula.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 180, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,13 +93,22 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        //LoginDAO dao = new LoginDAO();
+        //dao.accesoUsuario(txtUsuario.getText(), txtPassword.getText());
+    }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
+        // TODO add your handling code here:
+        //String usuario = "admin";
+        //String contraseña ="123";
+        
+    }//GEN-LAST:event_btnEntrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,12 +147,12 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Matricula;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JButton btnEntrar;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblContraseña;
+    private javax.swing.JLabel lblUsuario;
+    public javax.swing.JPasswordField txtPassword;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

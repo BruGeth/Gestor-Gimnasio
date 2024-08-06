@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package vista;
 
 /**
  *
@@ -27,7 +27,7 @@ public class Membresia extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnPlanFit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -37,7 +37,7 @@ public class Membresia extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        btnPlanBlack = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class Membresia extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btnPlanStandart = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -70,8 +70,8 @@ public class Membresia extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Plan Fit");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 310, 95, 31));
+        btnPlanFit.setText("Plan Fit");
+        jPanel1.add(btnPlanFit, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 310, 95, 31));
 
         jLabel1.setText("Desde:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 22, 59, -1));
@@ -100,8 +100,8 @@ public class Membresia extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("Plan Black");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 308, 91, 32));
+        btnPlanBlack.setText("Plan Black");
+        jPanel2.add(btnPlanBlack, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 308, 91, 32));
 
         jLabel4.setText("Desde:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 50, -1));
@@ -139,8 +139,8 @@ public class Membresia extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("Plan Standart");
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 311, -1, 31));
+        btnPlanStandart.setText("Plan Standart");
+        jPanel3.add(btnPlanStandart, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 311, -1, 31));
 
         jLabel2.setText("Desde:");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 19, 49, -1));
@@ -244,9 +244,9 @@ public class Membresia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton btnPlanBlack;
+    public javax.swing.JButton btnPlanFit;
+    public javax.swing.JButton btnPlanStandart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

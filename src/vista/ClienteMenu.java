@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package vista;
+
+import java.awt.Toolkit;
 
 /**
  *
  * @author G15br
  */
-public class ClientMenu extends javax.swing.JFrame {
+public class ClienteMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form ClientMenu
      */
-    public ClientMenu() {
+    public ClienteMenu() {
         initComponents();
     }
 
@@ -44,12 +46,15 @@ public class ClientMenu extends javax.swing.JFrame {
         txtTalla = new javax.swing.JTextField();
         txtPeso = new javax.swing.JTextField();
         btnEliminarCliente = new javax.swing.JToggleButton();
-        btnVolver = new javax.swing.JToggleButton();
-        btnRegistarCliente1 = new javax.swing.JToggleButton();
+        btnAtras = new javax.swing.JToggleButton();
+        btnRegistarCliente = new javax.swing.JToggleButton();
         btnActualizarCliente = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaClientes = new javax.swing.JTable();
         Icono = new javax.swing.JLabel();
+        btnEditar = new javax.swing.JButton();
+        btnListar = new javax.swing.JButton();
+        btnTipoMenbresia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,7 +97,23 @@ public class ClientMenu extends javax.swing.JFrame {
                 txtApellidosActionPerformed(evt);
             }
         });
+        txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidosKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 160, 30));
+
+        txtCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCodigoActionPerformed(evt);
+            }
+        });
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 160, 30));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -100,11 +121,46 @@ public class ClientMenu extends javax.swing.JFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 160, 30));
+
+        txtEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtEdadKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 160, 30));
+
+        txtGenero.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtGeneroKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 160, 30));
+
+        txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDireccionKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 160, 30));
+
+        txtTalla.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTallaKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtTalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 110, 160, 30));
+
+        txtPeso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPesoKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 160, 30));
 
         btnEliminarCliente.setText("Eliminar Cliente");
@@ -115,21 +171,21 @@ public class ClientMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btnEliminarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 210, -1, -1));
 
-        btnVolver.setText("Atras");
-        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+        btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolverActionPerformed(evt);
+                btnAtrasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
+        jPanel1.add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
 
-        btnRegistarCliente1.setText("Registrar Cliente");
-        btnRegistarCliente1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistarCliente.setText("Registrar Cliente");
+        btnRegistarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistarCliente1ActionPerformed(evt);
+                btnRegistarClienteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistarCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
+        jPanel1.add(btnRegistarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
 
         btnActualizarCliente.setText("Actualizar Cliente");
         btnActualizarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +218,30 @@ public class ClientMenu extends javax.swing.JFrame {
         Icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo_Golds_Gym.png"))); // NOI18N
         jPanel1.add(Icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
 
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 210, -1, 20));
+
+        btnListar.setText("Listar");
+        btnListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
+
+        btnTipoMenbresia.setText("Tipo de Menbresia");
+        btnTipoMenbresia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTipoMenbresiaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnTipoMenbresia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -188,18 +268,88 @@ public class ClientMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarClienteActionPerformed
 
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnVolverActionPerformed
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
-    private void btnRegistarCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarCliente1ActionPerformed
+    private void btnRegistarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistarCliente1ActionPerformed
+    }//GEN-LAST:event_btnRegistarClienteActionPerformed
 
     private void btnActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarClienteActionPerformed
 
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnListarActionPerformed
+
+    private void btnTipoMenbresiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTipoMenbresiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTipoMenbresiaActionPerformed
+
+    private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtCodigoKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        // TODO add your handling code here:
+         char c = evt.getKeyChar();
+        if((c<'a' || c>'z') && (c<'A' || c>'Z'))evt.consume();
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtApellidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z') && (c<'A' || c>'Z'))evt.consume();
+    }//GEN-LAST:event_txtApellidosKeyTyped
+
+    private void txtGeneroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGeneroKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z') && (c<'A' || c>'Z'))evt.consume();
+    }//GEN-LAST:event_txtGeneroKeyTyped
+
+    private void txtEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEdadKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+        if(txtEdad.getText().length() >= 2){
+            evt.consume();
+            Toolkit.getDefaultToolkit().beep();
+        }
+    }//GEN-LAST:event_txtEdadKeyTyped
+
+    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a' || c>'z') && (c<'A' || c>'Z'))evt.consume();
+    }//GEN-LAST:event_txtDireccionKeyTyped
+
+    private void txtTallaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTallaKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtTallaKeyTyped
+
+    private void txtPesoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesoKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtPesoKeyTyped
+    
+    
+                           
     /**
      * @param args the command line arguments
      */
@@ -217,31 +367,35 @@ public class ClientMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ClientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClienteMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ClientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClienteMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ClientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClienteMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ClientMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClienteMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ClientMenu().setVisible(true);
+                new ClienteMenu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Icono;
-    private javax.swing.JTable TablaClientes;
-    private javax.swing.JToggleButton btnActualizarCliente;
-    private javax.swing.JToggleButton btnEliminarCliente;
-    private javax.swing.JToggleButton btnRegistarCliente1;
-    private javax.swing.JToggleButton btnVolver;
+    public javax.swing.JTable TablaClientes;
+    public javax.swing.JToggleButton btnActualizarCliente;
+    public javax.swing.JToggleButton btnAtras;
+    public javax.swing.JButton btnEditar;
+    public javax.swing.JToggleButton btnEliminarCliente;
+    public javax.swing.JButton btnListar;
+    public javax.swing.JToggleButton btnRegistarCliente;
+    public javax.swing.JButton btnTipoMenbresia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -250,15 +404,15 @@ public class ClientMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtEdad;
-    private javax.swing.JTextField txtGenero;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtPeso;
-    private javax.swing.JTextField txtTalla;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JTextField txtCodigo;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtEdad;
+    public javax.swing.JTextField txtGenero;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtPeso;
+    public javax.swing.JTextField txtTalla;
     // End of variables declaration//GEN-END:variables
 }

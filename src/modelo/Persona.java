@@ -1,23 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Model;
+package modelo;
 
 /**
  *
  * @author G15br
  */
 public abstract class Persona {
+
     private String nombre;
+    private String apellidos;
     private int edad;
     private String direccion;
     private String genero;
     private double talla;
     private double peso;
-
-    public Persona(String nombre, int edad, String direccion, String genero, double talla, double peso) {
+    
+    public Persona(){
+        
+    }
+    
+    public Persona(String nombre, String apellidos) {
         this.nombre = nombre;
+        this.apellidos = apellidos;}
+
+    public Persona(String nombre, String apellidos, int edad, String direccion, String genero, double talla, double peso) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
         this.edad = edad;
         this.direccion = direccion;
         this.genero = genero;
@@ -31,6 +38,14 @@ public abstract class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public int getEdad() {
@@ -72,6 +87,5 @@ public abstract class Persona {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    
-    
+
 }
